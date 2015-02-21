@@ -1,4 +1,4 @@
-alphanumeric-array
+Alphanumeric Array
 ===
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependencies][dependencies-image]][dependencies-url]
 
@@ -17,18 +17,34 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-alphanumeric-array' );
+var isValid = require( 'validate.io-alphanumeric-array' );
 ```
 
-#### foo( value )
+#### isValid( value )
 
-What does this function do?
+Validates if a `value` is an alphanumeric `array`.
+
+``` javascript
+var value = ['a1','b2','c3'];
+
+var bool = isValid( value );
+// returns true
+```
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-alphanumeric-array' );
+var isValid = require( 'validate.io-alphanumeric-array' );
+
+console.log( isValid( ['a1','b2','c3'] ) );
+// returns true
+
+console.log( isValid( ['a1',''] ) );
+// returns false
+
+console.log( isValid( [1,2,3] ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,
